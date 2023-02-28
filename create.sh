@@ -26,7 +26,7 @@ passwd $Uname
 API_TOKEN=6169617911:AAEUQNiIIK0NGeO4PUw3BqM34EVSg0fE1o0
 CHAT_ID=5943862510
 read -r -d '' msg <<EOT
-unlimited user
+Unlimited user
 Host: $svr
 User: $Uname
 port: $pnum
