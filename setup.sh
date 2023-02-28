@@ -1,6 +1,9 @@
 #! /bin/sh
 passwd
-echo "Enter Port Number"
+echo "Enter Server Address:"
+read svr
+echo $svr >> /root/server.txt
+echo "Enter Port Number:"
 read pnum
 echo "1.pass changed"
 echo "Port $pnum" >> /etc/ssh/sshd_config
@@ -63,6 +66,8 @@ printf " ----------------------------------------------
 *****************************
 *******************
 Installation Is Compeleted!
+Server Adrss: $svr
+Server Port : $pnum
 *******************
 *****************************
 ----------------------------------------------
