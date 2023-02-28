@@ -58,6 +58,7 @@ echo "24.testexp.sh  Added to crontab"
 echo "" >> /root/fuser.txt
 echo "" >> /root/exp.txt
 echo "" >> /root/test.txt
+echo "$pnum" >> /root/port.txt
 printf " ----------------------------------------------
 *****************************
 *******************
