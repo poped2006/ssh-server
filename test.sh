@@ -1,6 +1,6 @@
 #! /bin/sh
 read svr < server.txt
-
+read pnum < port.txt
 echo "Enter Number Of Account"
 read Intnum
 echo "Enter Name Of Introducer"
@@ -30,7 +30,7 @@ CHAT_ID=5943862510
 read -r -d '' msg <<EOT
 Limited User
 Host: $svr
-Port: 2022
+Port: $pnum
 User: $strname$i
 Pass: $pts
 EOT
