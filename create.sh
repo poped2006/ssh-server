@@ -1,5 +1,6 @@
 #! /bin/sh
 read svr < server.txt
+read pnum < port.txt
 echo "Is this Acount Limited or not (y/n)?"
 read conc
 
@@ -28,6 +29,7 @@ read -r -d '' msg <<EOT
 unlimited user
 Host: $svr
 User: $Uname
+port: $pnum
 EOT
 curl -s -X POST https://api.telegram.org/bot$API_TOKEN/sendMessage -d chat_id=$CHAT_ID -d text="$msg"
 echo "Success"
@@ -65,7 +67,7 @@ CHAT_ID=5943862510
 read -r -d '' msg <<EOT
 Limited User
 Host: $svr
-Port: 2022
+Port: $pnum
 User: $strname$i
 Pass: $pts
 EOT
