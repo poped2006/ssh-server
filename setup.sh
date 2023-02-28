@@ -1,14 +1,16 @@
 #! /bin/sh
 passwd
+echo "Enter Port Number"
+read pnum
 echo "1.pass changed"
-echo "Port 2022" >> /etc/ssh/sshd_config
+echo "Port $pnum" >> /etc/ssh/sshd_config
 echo "2.port Added"
 yum install -q -y policycoreutils-python
 sleep 1
 echo "3.policycoreutils-python Installed"
-semanage port -a -t ssh_port_t -p tcp 2022
+semanage port -a -t ssh_port_t -p tcp $pnum
 echo "4.Port Added semanage at"
-semanage port -m -t ssh_port_t -p tcp 2022
+semanage port -m -t ssh_port_t -p tcp $pnum
 echo "5.Port Added semanage mt"
 sleep 1
 sudo systemctl status firewalld
@@ -16,9 +18,9 @@ echo "6.firewalld status"
 firewall-cmd --permanent --remove-service=ssh
 sleep 1
 echo "7.Remove ssh"
-firewall-cmd --permanent --add-port=2022/tcp
+firewall-cmd --permanent --add-port=$pnum/tcp
 sleep 1
-echo "8.Add 2022 to firewalld"
+echo "8.Add $pnum to firewalld"
 firewall-cmd --reload
 echo "9.Reload firewall"
 systemctl restart sshd
@@ -53,6 +55,9 @@ echo "*/1 * * * * /usr/bin/bash /root/exp.sh" >> /var/spool/cron/root
 echo "23.exp.sh  Added to crontab"
 echo "*/1 * * * * /usr/bin/bash /root/testexp.sh" >> /var/spool/cron/root
 echo "24.testexp.sh  Added to crontab"
+echo "" >> /root/fuser.txt
+echo "" >> /root/exp.txt
+echo "" >> /root/test.txt
 printf " ----------------------------------------------
 *****************************
 *******************
