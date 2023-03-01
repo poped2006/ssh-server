@@ -42,8 +42,8 @@ sudo cp /root/ssh-server/testexp.sh /root/testexp.sh
 echo "15.testexp.sh Copied"
 sudo cp /root/ssh-server/create.sh /root/create.sh
 echo "16.create.sh Copied"
-sudo cp /root/ssh-server/server.txt /root/server.txt
-echo "17.server.sh Copied"
+
+echo "17.server.txt skipped!"
 sudo cp /root/ssh-server/test.sh /root/test.sh
 echo "18.test.sh Copied"
 sudo cp /root/ssh-server/del.sh /root/del.sh
