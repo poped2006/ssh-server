@@ -42,7 +42,7 @@ sudo cp /root/ssh-server/testexp.sh /root/testexp.sh
 echo "15.testexp.sh Copied"
 sudo cp /root/ssh-server/create.sh /root/create.sh
 echo "16.create.sh Copied"
-
+sudo cp /root/ssh-server/tamdid.sh /root/tamdid.sh
 echo "17.server.txt skipped!"
 sudo cp /root/ssh-server/test.sh /root/test.sh
 echo "18.test.sh Copied"
