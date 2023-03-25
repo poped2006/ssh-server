@@ -1,5 +1,10 @@
 #! /bin/sh
+echo "Do you want to change root password? (y or n):
+read chngpass
+if [ $chngpass == "y" ]
+then
 passwd
+fi
 echo "Enter Server Address:"
 read svr
 echo $svr >> /root/server.txt
