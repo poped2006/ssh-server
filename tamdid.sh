@@ -24,11 +24,11 @@ read dys
 
 if [ $dys -gt 0 ];
 then
-sudo chage -E $(date -d +$dys\days +%F) $Unum
+sudo chage -E $(date -d +$dys\days +%F) $Uname
 
 read -r -d '' msg <<EOT
 Host: $svr
-User: $line
+User: $Uname
 charged for $dys days...
 EOT
 
