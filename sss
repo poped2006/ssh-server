@@ -1,0 +1,55 @@
+#! /bin/sh
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+WT='\033[97m' # White
+BL='\033[94m' # Blue
+clear
+echo -e $1 $2 $3 $4
+
+echo "Server managment"
+
+echo -e "${BL}############################################################${NC}"
+echo -e "${WT}choose an option to continue :"
+echo -e "1.create user."
+echo -e "2.Delete User."
+echo -e "3.List of online user."
+echo -e "4.List of Users."
+echo -e "5.Check user time Balance."
+echo -e "6.Server Information."
+echo -e "7.change telegram Bot access key."
+echo -e "0.Exit${NC}"
+echo -e "${BL}############################################################${NC}"
+echo "choose an option to continue :"
+read opt
+if [ "$opt" == "1" ]
+then
+bash /root/create.sh
+elif [ "$opt" == "2" ]
+then
+bash /root/del.sh
+elif [ "$opt" == "3" ]
+then
+loginctl
+elif [ "$opt" == "4" ]
+then
+less /root/fuser.txt
+elif [ "$opt" == "5" ]
+then
+bash /root/tamdid.sh
+elif [ "$opt" == "6" ]
+then
+echo "-------------------------------"
+echo /root/server.txt
+echo /root/port.txt
+echo "-------------------------------"
+
+elif [ "$opt" == "7" ]
+then
+echo "7"
+elif [ "$opt" == "0" ]
+then
+exit 1
+else
+msg="${RED}choose a right option${NC}"
+bash sss $msg
+fi
