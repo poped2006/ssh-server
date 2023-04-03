@@ -1,5 +1,5 @@
 #! /bin/sh
-echo "Do you want to change root password? (y or n):
+echo "Do you want to change root password? (y or n):"
 read chngpass
 if [ $chngpass == "y" ]
 then
