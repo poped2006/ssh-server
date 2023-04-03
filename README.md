@@ -1,7 +1,8 @@
 # ssh-server
 
-## Installing My server Instraction:
+## Installing SSH Server Managment Instraction:
 ### Compatible With CentOS 7
+this Platform runs with several script that can control time and limits each user to login once at a time
 
 ```
 yum install git -y -q
