@@ -4,13 +4,16 @@ read chngpass
 if [ $chngpass == "y" ]
 then
 passwd
+echo "1.pass changed"
 fi
 echo "Enter Server Address:"
 read svr
 echo $svr >> /root/server.txt
 echo "Enter Port Number:"
 read pnum
-echo "1.pass changed"
+sudo bash telegram-api.sh
+echo "Telegram Bot Installed"
+sleep 1
 echo "Port $pnum" >> /etc/ssh/sshd_config
 echo "2.port Added"
 yum install -q -y policycoreutils-python
