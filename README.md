@@ -3,7 +3,7 @@
 Installing My server Instraction:
 
 
-yum install git -y -q
+[code]yum install git -y -q[/code]
 
 git clone https://github.com/poped2006/ssh-server.git
 
