@@ -36,5 +36,7 @@ curl -s -X POST https://api.telegram.org/bot$API_TOKEN/sendMessage -d chat_id=$C
 else
 echo "nothing changed"
 fi
+else
+echo "$Uname did not exist in Limited User Section!"
 fi
 
