@@ -11,8 +11,12 @@ read svr
 echo $svr >> /root/server.txt
 echo "Enter Port Number:"
 read pnum
-sudo cp /root/ssh-server/telegram-api.sh /root/telegram-api.sh
-sudo bash /root/telegram-api.sh
+echo "Enter your Telegram API Token:"
+read tkn
+echo $tkn > /root/api.txt
+echo "Enter your Telegram Chat-ID:"
+read cidd
+echo $cidd > /root/id.txt
 echo "Telegram Bot Installed"
 sleep 1
 sudo cp /root/ssh-server/sss /usr/bin/sss
