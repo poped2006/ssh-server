@@ -28,6 +28,9 @@ echo "2.port Added"
 yum install -q -y policycoreutils-python
 sleep 1
 echo "3.policycoreutils-python Installed"
+yum install psmisc -y -q
+sleep 1
+echo "3.A.psmisc Installed"
 semanage port -a -t ssh_port_t -p tcp $pnum
 echo "4.Port Added semanage at"
 semanage port -m -t ssh_port_t -p tcp $pnum
