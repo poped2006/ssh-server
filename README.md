@@ -1,6 +1,6 @@
 # ssh-server
 
-## 1. Installing SSH Server Managment Instraction:
+## 1. Installing SSH Server Managment Instruction:
 ### Compatible With CentOS 7
 this Platform runs with several script that can control time and limits each user to login once at a time
 
@@ -10,6 +10,10 @@ yum install git -y -q
 ```
 git clone https://github.com/poped2006/ssh-server.git
 ```
+this setup:
+ask u about A simple Domain that refers to your VPS Ip Address 
+Ask about port that you want to connect with
+Ask about Telegram API Code And Chat ID and you must have one 
 ```
 sudo bash /root/ssh-server/setup.sh
 ```
