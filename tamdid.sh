@@ -18,7 +18,7 @@ nowd=$(date +%s $now)
 scnds=$(($expires - $nowd))
 dayr=$((($scnds)/(3600*24)))
 echo "Remaining Day for $Uname is $dayr days."
-echo "enter days to charge :"
+echo "enter days to charge ( or Leave it Blank too pass! ):"
 read dys
 
 
