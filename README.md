@@ -1,6 +1,6 @@
 # ssh-server
 
-Installing My server Instraction:
+##Installing My server Instraction:
 
 ```
 yum install git -y -q
