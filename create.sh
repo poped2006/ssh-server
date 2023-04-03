@@ -11,6 +11,7 @@ then
 #-------------------------------------------------------------
 echo "Enter User name."
 read Uname
+
 ex1=0
 read -r -d '' ffu < fuser.txt
 Unum=`(echo "$ffu" | grep -c -w $Uname)`
@@ -22,13 +23,16 @@ fi
 if [ $ex1 == 0 ]
 then
 echo $Uname >> fuser.txt
-adduser -g users $Uname
+echo "Enter Password For $Uname :"
+read Pssw
+sudo useradd -p $(perl -e 'print crypt($ARGV[0], "password")' $Pssw) -g users "$Uname"
 usermod -s /bin/false $Uname
 passwd $Uname
 read -r -d '' msg <<EOT
 Unlimited user
 Host: $svr
 User: $Uname
+Pass: $Pssw
 port: $pnum
 EOT
 curl -s -X POST https://api.telegram.org/bot$API_TOKEN/sendMessage -d chat_id=$CHAT_ID -d text="$msg"
