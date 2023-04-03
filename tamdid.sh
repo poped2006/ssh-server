@@ -20,7 +20,7 @@ dayr=$((($scnds)/(3600*24)))
 echo "Remaining Day for $Uname is $dayr days."
 echo "enter days to charge ( or Leave it Blank too pass! ):"
 read dys
-
+dys=${dys:-0}
 
 if [ $dys -gt 0 ];
 then
