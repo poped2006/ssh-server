@@ -27,7 +27,7 @@ echo "Enter Password For $Uname :"
 read Pssw
 sudo useradd -p $(perl -e 'print crypt($ARGV[0], "password")' $Pssw) -g users "$Uname"
 usermod -s /bin/false $Uname
-passwd $Uname
+
 read -r -d '' msg <<EOT
 Unlimited user
 Host: $svr
