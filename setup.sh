@@ -11,8 +11,13 @@ read svr
 echo $svr >> /root/server.txt
 echo "Enter Port Number:"
 read pnum
-sudo bash telegram-api.sh
+sudo cp /root/ssh-server/telegram-api.sh /root/telegram-api.sh
+sudo bash /root/telegram-api.sh
 echo "Telegram Bot Installed"
+sleep 1
+sudo cp /root/ssh-server/sss /usr/bin/sss
+sudo chmod +x /usr/bin/sss
+echo "Server Manager Installed"
 sleep 1
 echo "Port $pnum" >> /etc/ssh/sshd_config
 echo "2.port Added"
