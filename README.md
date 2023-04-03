@@ -1,4 +1,4 @@
-# ssh-server
+# SSH-Server-Managment
 
 ## 1. Installing SSH Server Managment Instruction:
 ### Compatible With CentOS 7
