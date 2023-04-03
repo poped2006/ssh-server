@@ -1,6 +1,8 @@
 #! /bin/sh
 read svr < server.txt
 read pnum < port.txt
+read API_TOKEN < api.txt
+read CHAT_ID < id.txt
 echo "Is this Acount Limited or not (y/n)?"
 read conc
 
@@ -23,8 +25,6 @@ echo $Uname >> fuser.txt
 adduser -g users $Uname
 usermod -s /bin/false $Uname
 passwd $Uname
-API_TOKEN=6169617911:AAEUQNiIIK0NGeO4PUw3BqM34EVSg0fE1o0
-CHAT_ID=5943862510
 read -r -d '' msg <<EOT
 Unlimited user
 Host: $svr
@@ -62,8 +62,6 @@ usermod -s /bin/false "$strname$i"
 echo "$strname$i"
 echo $pts
 
-API_TOKEN=6169617911:AAEUQNiIIK0NGeO4PUw3BqM34EVSg0fE1o0
-CHAT_ID=5943862510
 read -r -d '' msg <<EOT
 Limited User
 Host: $svr
