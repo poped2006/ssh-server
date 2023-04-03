@@ -39,8 +39,8 @@ bash /root/tamdid.sh
 elif [ "$opt" == "6" ]
 then
 echo "-------------------------------"
-echo /root/server.txt
-echo /root/port.txt
+echo "$(</root/server.txt)"
+echo "$(</root/port.txt)"
 echo "-------------------------------"
 
 elif [ "$opt" == "7" ]
