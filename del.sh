@@ -1,5 +1,7 @@
 #! /bin/sh
 read svr < server.txt
+read API_TOKEN < api.txt
+read CHAT_ID < id.txt
 echo "Enter user name:"
 read Uname
 killall -u $Uname
@@ -9,8 +11,6 @@ sudo echo "$mme" > fuser.txt
 mme=$(sudo sed "/"$Uname"/d" exp.txt)
 sudo echo "$mme" > exp.txt
 
-API_TOKEN=6169617911:AAEUQNiIIK0NGeO4PUw3BqM34EVSg0fE1o0
-CHAT_ID=5943862510
 read -r -d '' msg <<EOT
 Host: $svr
 User: $Uname
