@@ -1,6 +1,7 @@
 # ssh-server
 
 ## Installing My server Instraction:
+### Compatible With CentOS 7
 
 ```
 yum install git -y -q
